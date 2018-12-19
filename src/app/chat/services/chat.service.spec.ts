@@ -1,15 +1,17 @@
 import {inject, TestBed} from '@angular/core/testing';
 
 import { ChatService } from './chat.service';
-import {HttpClient} from '@angular/common/http';
-import {Message} from '../models/message';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('ChatService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    providers: [ChatService, HttpClient, Message]
+    imports: [
+      HttpClientModule,
+    ],
   }));
 
-  it('should ...', inject([ChatService], (service: ChatService) => {
+  it('should be created', () => {
+    const service: ChatService = TestBed.get(ChatService);
     expect(service).toBeTruthy();
-  }));
+  });
 });

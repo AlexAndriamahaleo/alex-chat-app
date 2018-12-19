@@ -10,7 +10,9 @@ export class ChatAffichageComponent implements OnInit {
 
   @Input() messages: Array<Message>;
 
-  constructor() { }
+  constructor() {
+    this.messages = new Array<Message>();
+  }
 
   ngOnInit() {
   }
