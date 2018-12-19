@@ -22,13 +22,13 @@ export class ChatService {
     }
     return messages;
   }
-  public addMessage(message: Message): Observable<Array<Message>>{
+  public addMessage(message: Message): Observable<Array<Message>> {
     this.messages.push(message);
     return of(this.messages);
   }
   public getMessages(): Observable<Array<Message>> {
     return new Observable<Array<Message>>((observer) => {
-      this.http.get<Array<any>>('https://jsonplaceholder.typicode.com/posts')
+      this.http.get<Array<any>>('http://127.0.0.1:3000')
         .subscribe(
           (messages) => {
             this.messages = ChatService.buildMessages(messages);
