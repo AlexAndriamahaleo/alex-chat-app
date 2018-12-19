@@ -1,9 +1,15 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {FormsModule} from '@angular/forms';
+import {ChatModule} from './chat/chat.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        FormsModule,
+        ChatModule
+      ],
       declarations: [
         AppComponent
       ],
@@ -26,6 +32,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to alex-chat-app!');
+    expect(compiled.querySelector('a').textContent).toContain('alex-chat-app');
   });
 });
