@@ -1,4 +1,4 @@
-import {inject, TestBed} from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
 import { ChatService } from './chat.service';
 import {HttpClientModule} from '@angular/common/http';
