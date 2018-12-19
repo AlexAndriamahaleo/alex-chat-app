@@ -1,3 +1,7 @@
-<label>Votre message:</label>
-<input type="text" name="message" [(ngModel)]="texte">
-<button type="button" (click)="envoyer()">envoyer</button>
+<form>
+  <div class="form-group">
+    <label for="inputMessage"></label>
+    <input id="inputMessage" class="form-control" type="text" name="message" [(ngModel)]="texte" placeholder="Écrire un message..">
+  </div>
+  <button class="btn btn-primary" type="button" (click)="envoyer()">Envoyer</button>
+</form>

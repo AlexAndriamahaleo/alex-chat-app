@@ -1,5 +1,6 @@
-<li>
-  {{ message.texte }} ({{ message.auteur }})
-  <br/>
+<br/>
+<div class="d-flex w-100 justify-content-between">
+  <h5 class="mb-1">> {{ message.auteur }} : </h5>
   <small>{{ message.date | date: 'dd/MM/yyyy HH:mm:ss' }}</small>
-</li>
+</div>
+<p class="mb-1">{{ message.texte }}</p>
